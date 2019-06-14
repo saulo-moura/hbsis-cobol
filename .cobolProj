@@ -150,7 +150,7 @@
    </settings>
    <files xsi:type="projectFileStore">
       <filetype type="cobol" xsi:type="cobolFileContainer">
-         <file compile="true" path="CLIAMBEV.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="CADAMBEV.cbl" xsi:type="cobolFile"/>
       </filetype>
       <filetype type="cobol.copybook" xsi:type="cobolFileContainer"/>
    </files>

@@ -87,7 +87,7 @@
 	<!--  **********************  -->
 	<!-- cobol_file_set_1 -->
 	<mffilelist type="srcfile" id="cobol_file_set_1" srcdir="${basedir}">
-		<file name="CLIAMBEV.cbl"/>
+		<file name="CADAMBEV.cbl"/>
 	</mffilelist>
 	<!-- COBOL copybook locations -->
 	<mffilelist id="cobol.copybook.locations">
@@ -97,8 +97,8 @@
 	<!--  * Source File Compile and Link *  -->
 	<!--  ********************************  -->
 	<!-- Configuration:New_Configuration -->
-	<target name="FileCompile.New_Configuration.CLIAMBEV.cbl">
-		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CLIAMBEV.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+	<target name="FileCompile.New_Configuration.CADAMBEV.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CADAMBEV.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
 			<mffilelist refid="cobol.copybook.locations"/>
 			<mfdirlist refid="cobol_directive_set_1"/>
 		</cobol>
@@ -108,7 +108,7 @@
 	<!--  ****************  -->
 	<!-- Default -->
 	<mffilelist id="cobol.default.object.files.New Configuration" srcdir="${basedir}/New_Configuration.bin" type="objfile">
-		<file name="CLIAMBEV${objext}"/>
+		<file name="CADAMBEV${objext}"/>
 	</mffilelist>
 	<!--  *************************  -->
 	<!--  * Configuration targets *  -->
