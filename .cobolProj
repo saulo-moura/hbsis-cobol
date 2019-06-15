@@ -33,7 +33,7 @@
                <rts_bind value="false"/>
                <custom_link_command value=""/>
                <debug value="false"/>
-               <entry_point name=""/>
+               <entry_point name="MENUPRIN"/>
                <entry_point_runtime value="false"/>
                <error_undefined_syms value="false"/>
                <application_type value="console"/>
@@ -46,6 +46,17 @@
                <threaded_rts value="true"/>
                <verbose value="false"/>
             </link_settings>
+            <application_configuration xsi:type="runtimeConfigurationSettings">
+               <cobol_switches xsi:type="projectCobolSwitches"/>
+               <rts_switches xsi:type="projectRtsSwitches"/>
+               <envScriptParameters></envScriptParameters>
+               <envScriptPath></envScriptPath>
+               <inheritBuildEnv>false</inheritBuildEnv>
+               <tunables>
+                  <tunable index="0" name="screen_lines" value="25"/>
+                  <tunable index="0" name="screen_cols" value="80"/>
+               </tunables>
+            </application_configuration>
          </configuration>
       </configurations>
       <cobol_settings xsi:type="cobolSettings">
@@ -147,11 +158,26 @@
             <option id="autolink_addressing_mode" name="mf370chkAutoLink" value="AMODE(31)"/>
          </options>
       </asm_autolink_settings>
+      <preprocessors_settings xsi:type="preprocessorsSettings"/>
+      <code_analysis_settings enabled="false" genDataFiles="false" keepDataFiles="false" xsi:type="codeAnalysisSettings"/>
    </settings>
    <files xsi:type="projectFileStore">
       <filetype type="cobol" xsi:type="cobolFileContainer">
-         <file compile="true" path="CLIAMBEV.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="CADACLIE.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="CADAVEND.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="RELACLIE.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="RELAVEND.cbl" xsi:type="cobolFile"/>
+         <file compile="true" path="MENUPRIN.cbl" xsi:type="cobolFile"/>
       </filetype>
-      <filetype type="cobol.copybook" xsi:type="cobolFileContainer"/>
+      <filetype type="cobol.copybook" xsi:type="cobolFileContainer">
+         <file compile="true" path="REGICADA.cpy" xsi:type="cobolFile"/>
+         <file compile="true" path="PMENUSCR.cpy" xsi:type="cobolFile"/>
+         <file compile="true" path="INCLISCR.cpy" xsi:type="cobolFile"/>
+         <file compile="true" path="VMENUSCR.cpy" xsi:type="cobolFile"/>
+         <file compile="true" path="INVENSCR.cpy" xsi:type="cobolFile"/>
+         <file compile="true" path="ALVENSCR.cpy" xsi:type="cobolFile"/>
+         <file compile="true" path="RELATCLI.cpy" xsi:type="cobolFile"/>
+         <file compile="true" path="RELATVEN.cpy" xsi:type="cobolFile"/>
+      </filetype>
    </files>
 </project>
