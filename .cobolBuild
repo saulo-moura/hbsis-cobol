@@ -87,7 +87,11 @@
 	<!--  **********************  -->
 	<!-- cobol_file_set_1 -->
 	<mffilelist type="srcfile" id="cobol_file_set_1" srcdir="${basedir}">
-		<file name="CADAMBEV.cbl"/>
+		<file name="CADACLIE.cbl"/>
+		<file name="CADAVEND.cbl"/>
+		<file name="RELACLIE.cbl"/>
+		<file name="RELAVEND.cbl"/>
+		<file name="MENUPRIN.cbl"/>
 	</mffilelist>
 	<!-- COBOL copybook locations -->
 	<mffilelist id="cobol.copybook.locations">
@@ -97,8 +101,32 @@
 	<!--  * Source File Compile and Link *  -->
 	<!--  ********************************  -->
 	<!-- Configuration:New_Configuration -->
-	<target name="FileCompile.New_Configuration.CADAMBEV.cbl">
-		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CADAMBEV.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+	<target name="FileCompile.New_Configuration.CADACLIE.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CADACLIE.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.CADAVEND.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="CADAVEND.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.RELACLIE.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="RELACLIE.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.RELAVEND.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="RELAVEND.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
+			<mffilelist refid="cobol.copybook.locations"/>
+			<mfdirlist refid="cobol_directive_set_1"/>
+		</cobol>
+	</target>
+	<target name="FileCompile.New_Configuration.MENUPRIN.cbl">
+		<cobol debug="true" analysisData="${analysisData}" threadCount="${buildThreadCount}" threadedRts="true" analysisDataDir="${analysisDataDir}" useDirectiveSet="${useDirectiveSet}" srcfile="MENUPRIN.cbl" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobolFailOnError}" srcdir="${basedir}" forceCompile="${forceCompile}" connectionName="${connectionName}" projectName="${projectName}" desttype="obj">
 			<mffilelist refid="cobol.copybook.locations"/>
 			<mfdirlist refid="cobol_directive_set_1"/>
 		</cobol>
@@ -108,7 +136,11 @@
 	<!--  ****************  -->
 	<!-- Default -->
 	<mffilelist id="cobol.default.object.files.New Configuration" srcdir="${basedir}/New_Configuration.bin" type="objfile">
-		<file name="CADAMBEV${objext}"/>
+		<file name="CADACLIE${objext}"/>
+		<file name="CADAVEND${objext}"/>
+		<file name="RELACLIE${objext}"/>
+		<file name="RELAVEND${objext}"/>
+		<file name="MENUPRIN${objext}"/>
 	</mffilelist>
 	<!--  *************************  -->
 	<!--  * Configuration targets *  -->
@@ -140,7 +172,7 @@
 		</cobol>
 	</target>
 	<target name="cobol.link.cfg.New_Configuration">
-		<cobollink debug="true" destfile="hbsis-cobol" entrypoint="" sharedRts="true" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobollinkFailOnError}" desttype="exe" threadedRts="true">
+		<cobollink debug="true" destfile="hbsis-cobol" entrypoint="MENUPRIN" sharedRts="true" destdir="${basedir}/New_Configuration.bin" is64bit="false" failonerror="${cobollinkFailOnError}" desttype="exe" threadedRts="true">
 			<mffilelist refid="cobol.default.object.files.New Configuration"/>
 		</cobollink>
 	</target>
